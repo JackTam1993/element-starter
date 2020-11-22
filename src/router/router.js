@@ -4,11 +4,16 @@ import VueRouter from 'vue-router';
 
 // 引入组件
 import main from '../page/main';
+import page1 from '../page/page1';
 
 const routes = [
     {
         path: '/',
         component: main
+    },
+    {
+        path: '/page1',
+        component: page1
     }
 ];
 
