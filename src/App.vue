@@ -46,12 +46,29 @@
 </template>
 
 <script>
+import api from '../src/http/api';
+
 export default {
   methods: {
     goToPage1() {
       this.$router.push('/page1')
+    },
+    async login() {
+      try {
+        let result = await api.login({
+          customer_name: 'Jack12',
+          password: 1112
+        })
+
+        console.log(result);
+      } catch (error) {
+        console.log(error);
+      }
     }
   },
+  mounted() {
+    this.login();
+  }
 };
 </script>
 
