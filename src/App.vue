@@ -24,15 +24,20 @@
       </el-aside>
 
       <div class="context">
-        <el-header>
-
+        <el-header class="context-header">
+          <div>
+            <span>用户名：aaa</span>
+          </div>
+          <div>
+            <img src="https://cube.elemecdn.com/6/94/4d3ea53c084bad6931a56d5158a48jpeg.jpeg" class="user-icon" alt="">
+          </div>
         </el-header>
 
         <el-main class="context-main">
           <router-view></router-view>
         </el-main>
 
-        <el-footer>
+        <el-footer class="context-footer">
           
         </el-footer>
       </div>
@@ -66,8 +71,24 @@ export default {
 .context-main {
   height: calc(100% - 120px);
 }
+.context-header {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  border-bottom: 1px solid #e6e6e6;
+}
+.user-icon {
+  height: 36px;
+  width: 36px;
+  margin-right: 10px;
+  border-radius: 18px;
+}
 .aside {
   height: 100%;
+  border-right: #e6e6e6 1px solid;
   /* background: #409EFF; */
+}
+.context-footer {
+  border-top: 1px solid #e6e6e6;
 }
 </style>
