@@ -3,6 +3,7 @@
     <img src="./assets/logo.png">
     <div>
       <el-button @click="startHacking">Start</el-button>
+      <router-view></router-view>
     </div>
   </div>
 </template>
